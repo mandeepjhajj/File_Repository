@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6b3dd7139d554d81902c614fb7d1e486" Name="Diagram1" ZoomLevel="61">
+        <EntityTypeShape EntityType="Model.MyUsersStoreLink" Width="1.5" PointX="3" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Storage" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK__MyUsersSt__Store__25869641" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.HasFolder" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.HasFile1" />
+        <EntityTypeShape EntityType="Model.AspNetRole" Width="1.5" PointX="5.375" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AspNetUser" Width="1.5" PointX="7.625" PointY="0.875" />
+        <AssociationConnector Association="Model.AspNetUserRoles" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

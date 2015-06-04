@@ -1,0 +1,58 @@
+﻿@model FileRepository.Models.MultiFileContent
+@{
+    ViewBag.Title = "MultipleRead";
+}
+<script>
+    $(document).ready(function () {
+        $(".divs div").each(function (e) {
+            if (e != 0)
+                $(this).hide();
+        });
+
+        $("#next").click(function () {
+            if ($(".divs div:visible").next().length != 0)
+                $(".divs div:visible").next().show().prev().hide();
+            else {
+                $(".divs div:visible").hide();
+                $(".divs div:first").show();
+            }
+            return false;
+        });
+
+        $("#prev").click(function () {
+            if ($(".divs div:visible").prev().length != 0)
+                $(".divs div:visible").prev().show().next().hide();
+            else {
+                $(".divs div:visible").hide();
+                $(".divs div:last").show();
+            }
+            return false;
+        });
+    });
+</script>
+
+
+<h2>MultipleRead</h2>
+<ul class="pager">
+    <li>
+        <a id="prev" href="#">Previous</a>
+    </li>
+    <li>
+        <a id="next" href="#">Next</a>
+    </li>
+</ul>
+@{
+    int i = 0;
+    <div class="divs">
+        @foreach (KeyValuePair<string, string> s in Model.fileContent)
+        {
+            <div id="div@(i=i+1)">
+                <pre id="fileContent" style="max-height:650px;overflow:auto">
+                   @s.Value
+                </pre>
+            </div>
+
+        }
+    </div>
+}
+@Html.ActionLink("Back to Index", "Index")

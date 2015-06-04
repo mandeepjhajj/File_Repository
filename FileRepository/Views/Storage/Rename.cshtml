@@ -1,0 +1,27 @@
+﻿@model List<FileRepository.Models.Storage>
+
+@{
+    ViewBag.Title = "Rename";
+}
+
+<h2>Rename</h2>
+
+@using (Html.BeginForm("Rename", "Storage"))
+{ 
+<div>
+    <div style="height:50px;">
+        @Html.Label("Select folder")
+        @Html.DropDownList("selectFolder", Model.Select(m => new SelectListItem() { Text = m.Name, Value = m.ServerLocation }))
+    </div>
+    <div style="height:30px;">
+        @Html.Label("New Name")
+        @Html.TextBox("newName")
+    </div>
+    <div class="form-actions no-color">
+        <input type="submit" value="Delete" class="btn btn-primary" /> 
+        <br />
+        <br />
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</div>
+}

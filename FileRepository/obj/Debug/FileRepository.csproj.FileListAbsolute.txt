@@ -1,0 +1,182 @@
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\FileRepository.dll.config
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\FileRepository.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\FileRepository.pdb
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Antlr3.Runtime.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\EntityFramework.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\EntityFramework.SqlServer.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Microsoft.Owin.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Microsoft.Owin.Security.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Microsoft.Owin.Security.Google.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Microsoft.Web.Infrastructure.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Newtonsoft.Json.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Owin.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\System.Net.Http.Formatting.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\System.Web.Helpers.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\System.Web.Http.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\System.Web.Http.WebHost.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\System.Web.Mvc.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\System.Web.Optimization.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\System.Web.Razor.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\System.Web.WebPages.Deployment.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\System.Web.WebPages.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\System.Web.WebPages.Razor.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\WebGrease.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\System.Web.Helpers.xml
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\System.Web.Mvc.xml
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\System.Web.Optimization.xml
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\System.Web.Razor.xml
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\System.Web.WebPages.xml
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\System.Web.WebPages.Deployment.xml
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\System.Web.WebPages.Razor.xml
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Newtonsoft.Json.xml
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Antlr3.Runtime.pdb
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\System.Net.Http.Formatting.xml
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\System.Web.Http.xml
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\System.Web.Http.WebHost.xml
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\EntityFramework.xml
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\EntityFramework.SqlServer.xml
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Microsoft.Owin.xml
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Microsoft.Owin.Security.xml
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Microsoft.Owin.Security.Google.xml
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\obj\Debug\FileRepository.dll
+c:\users\mandeep\documents\visual studio 2013\Projects\FileRepository\FileRepository\obj\Debug\FileRepository.pdb
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository\FileRepository\obj\Debug\FileRepository.csprojResolveAssemblyReference.cache
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\FileRepository.dll.config
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\FileRepository.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\FileRepository.pdb
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Antlr3.Runtime.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\EntityFramework.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\EntityFramework.SqlServer.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Microsoft.Owin.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Microsoft.Owin.Security.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Newtonsoft.Json.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Owin.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\System.Net.Http.Formatting.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\System.Web.Helpers.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\System.Web.Http.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\System.Web.Http.WebHost.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\System.Web.Mvc.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\System.Web.Optimization.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\System.Web.Razor.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\System.Web.WebPages.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\System.Web.WebPages.Razor.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\WebGrease.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\System.Web.Helpers.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\System.Web.Mvc.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\System.Web.Optimization.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\System.Web.Razor.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\System.Web.WebPages.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\System.Web.WebPages.Razor.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Newtonsoft.Json.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Antlr3.Runtime.pdb
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\System.Net.Http.Formatting.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\System.Web.Http.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\System.Web.Http.WebHost.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\EntityFramework.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\EntityFramework.SqlServer.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Microsoft.Owin.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Microsoft.Owin.Security.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\obj\Debug\FileRepository.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_1 - Copy\FileRepository\obj\Debug\FileRepository.pdb
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\FileRepository.dll.config
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\FileRepository.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\FileRepository.pdb
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Antlr3.Runtime.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\EntityFramework.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\EntityFramework.SqlServer.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Microsoft.Owin.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Microsoft.Owin.Security.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Newtonsoft.Json.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Owin.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\System.Net.Http.Formatting.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\System.Web.Helpers.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\System.Web.Http.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\System.Web.Http.WebHost.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\System.Web.Mvc.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\System.Web.Optimization.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\System.Web.Razor.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\System.Web.WebPages.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\System.Web.WebPages.Razor.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\WebGrease.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\System.Web.Helpers.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\System.Web.Mvc.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\System.Web.Optimization.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\System.Web.Razor.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\System.Web.WebPages.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\System.Web.WebPages.Razor.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Newtonsoft.Json.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Antlr3.Runtime.pdb
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\System.Net.Http.Formatting.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\System.Web.Http.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\System.Web.Http.WebHost.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\EntityFramework.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\EntityFramework.SqlServer.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Microsoft.Owin.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Microsoft.Owin.Security.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\obj\Debug\FileRepository.csprojResolveAssemblyReference.cache
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\obj\Debug\FileRepository.dll
+C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\obj\Debug\FileRepository.pdb

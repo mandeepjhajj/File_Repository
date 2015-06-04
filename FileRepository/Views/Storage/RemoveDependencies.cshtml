@@ -1,0 +1,43 @@
+﻿@model List<FileRepository.Models.Storage>
+@{
+    ViewBag.Title = "RemoveDependencies";
+}
+<script>
+    $(document).ready(function () {
+       
+        $('#CustomFile').change(function () {
+            $('#formDepend').submit();
+            
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('#postdelete').click(function () {
+            $('#formDependDelete').submit();
+        });
+    });
+</script>
+
+<h2>RemoveDependencies</h2>
+
+
+<div>
+@using (Html.BeginForm("CustomShowDepend", "Storage", FormMethod.Post, new { id = "formDepend" }))
+{
+    @Html.DropDownList("CustomFile", Model.Select(m => new SelectListItem() { Text = m.Name, Value = m.ServerLocation }),"Select file")
+}
+</div>
+<br />
+<br />
+<div>
+@using (Html.BeginForm("RemoveDependencies", "Storage", FormMethod.Post, new { id = "formDependDelete" }))
+{
+    <div id="showMessage" style="height:200px">
+        @Html.DropDownList("ParentFile", Model.Select(m => new SelectListItem() { Text = m.Name, Value = m.ServerLocation }))
+        @Html.ListBox("DependingFile",ViewBag.fileList as MultiSelectList, new { @class = "chzn-select" })
+    </div>
+    <a href="#" id="postdelete">Delete</a>
+}
+</div>

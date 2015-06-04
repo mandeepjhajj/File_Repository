@@ -1,0 +1,62 @@
+﻿@model List<FileRepository.Models.RelativePathModel>
+@{
+    ViewBag.Title = "RemoveDependenciesRelative";
+}
+
+<script>
+    $(document).ready(function () {
+
+        $('#CustomFile').change(function () {
+            $('#formDepend').submit();
+
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('#postdelete').click(function () {
+            $('#formDependDelete').submit();
+        });
+    });
+</script>
+
+<h2>RemoveDependencies</h2>
+
+
+<div>
+    <div class="col-md-3">
+        @using (Html.BeginForm("CustomShowDepend", "Storage", FormMethod.Post, new { id = "formDepend" }))
+        {
+            @Html.DropDownList("CustomFile", Model.Select(m => new SelectListItem() { Text = m.RelativePath, Value = m.ServerLocation }), "Select file")
+        }
+    </div>
+    <div class="col-md-3">
+        @Html.ActionLink("Show All Files", "RemoveDependencies", "Storage")
+    </div>
+   
+</div>
+<br />
+<br />
+<div>
+    @using (Html.BeginForm("RemoveDependencies", "Storage", FormMethod.Post, new { id = "formDependDelete" }))
+    {
+        <div id="showMessage" style="height:100px">
+            <div class="col-md-5">
+                @Html.Encode("Selected File")
+                @Html.DropDownList("ParentFile", Model.Select(m => new SelectListItem() { Text = m.RelativePath, Value = m.ServerLocation }))
+                &nbsp;
+            </div>
+            <div class="col-md-7">
+                @Html.Encode("List of dependent files")
+                @Html.ListBox("DependingFile", ViewBag.fileList as MultiSelectList, new { @class = "chzn-select", @style = "max-width:700px;" })
+            </div>
+           
+        </div>
+        <a class="btn-primary" style="padding:10px" href="#" id="postdelete">Delete</a>
+    }
+</div>
+<br />
+@Html.ActionLink("Back", "ModifyDependencies", "Storage")
+&nbsp;
+@Html.ActionLink("Back to Index", "Index")

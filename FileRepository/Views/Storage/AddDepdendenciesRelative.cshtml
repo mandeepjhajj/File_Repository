@@ -1,0 +1,39 @@
+﻿@model List<FileRepository.Models.RelativePathModel>
+
+@{
+    ViewBag.Title = "AddDepdendenciesRelative";
+}
+
+<h2>AddDependencies</h2>
+
+@using (Html.BeginForm("AddDependencies", "Storage"))
+{
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5">
+                @Html.Encode("Select file to modify dependency")
+                @Html.DropDownList("Files", Model.Select(m => new SelectListItem() { Text = m.RelativePath, Value = m.ServerLocation }), "-----Select file------")
+                @*<dl class="dl-horizontal">
+                    <dt>
+                        @Html.Display("Select file to modify dependency")
+                    </dt>
+                    <dd>
+                        @Html.DropDownList("Files", Model.Select(m => new SelectListItem() { Text = m.RelativePath, Value = m.ServerLocation }), "-----Select file------")
+                    </dd>
+                </dl>*@
+
+            </div>
+            <div class="col-md-7" style="max-width:600px;">
+                @Html.Encode("Select the dependent files from the list")
+                @Html.ListBox("AllFiles", ViewBag.fileList as MultiSelectList, new { @class = "chzn-select", @style = "max-width:700px;" })
+            </div>
+        </div>
+        <div class="form-actions no-color">
+            <input type="submit" value="Add" class="btn btn-primary" />
+            <br />
+            @Html.ActionLink("Modify Dependencies", "ModifyDependencies", "Storage")
+            &nbsp;
+            @Html.ActionLink("Back to Index", "Index")
+        </div>
+    </div>
+}

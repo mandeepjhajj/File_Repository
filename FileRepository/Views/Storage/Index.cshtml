@@ -1,0 +1,119 @@
+﻿@model IEnumerable<FileRepository.Models.Storage>
+
+@{
+    ViewBag.Title = "Index";
+    
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientLocation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServerLocation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContainsFile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContainsFolder)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Size)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdatedOn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReadAccess)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WriteAccess)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsHidden)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsSharing)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ServerLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContainsFile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContainsFolder)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Size)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedOn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdatedOn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdatedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReadAccess)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WriteAccess)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsHidden)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsSharing)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
+

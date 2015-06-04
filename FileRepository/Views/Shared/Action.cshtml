@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Action";
+}
+
+@if (Session["CurrentRole"] == "admin")
+{
+    <div class="dropdown" style="padding-top: 15px; padding-bottom: 15px; padding-right: 15px; ">
+        
+        <a style="text-decoration:none; color: #999; padding:15px" href="#" class="dropdown-toggle" data-toggle="dropdown">Action <b class="caret"></b></a>
+
+        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+            <li style="padding:10px"> @Html.ActionLink("Modify Dependencies", "ModifyDependencies", "Storage")</li>
+            <li style="padding:10px"> @Html.ActionLink("Create Folder", "Create", "Storage") </li>
+            <li style="padding:10px"> @Html.ActionLink("Delete File", "DeleteFile", "Storage") </li>
+            <li style="padding:10px"> @Html.ActionLink("Rename Folder", "Rename", "Storage") </li>
+            <li style="padding:10px"> @Html.ActionLink("Upload File", "Upload", "Storage") </li>
+            <li style="padding:10px"> @Html.ActionLink("Download File", "Download", "Storage") </li>
+        </ul>
+    </div>
+}
+
+@if (Session["CurrentRole"] == "developer")
+{
+    <div class="dropdown" style="padding-top: 15px; padding-bottom: 15px; padding-right: 15px; ">
+        
+        <a style="text-decoration:none; color: #999; padding:15px" href="#" class="dropdown-toggle" data-toggle="dropdown">Action <b class="caret"></b></a>
+
+        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+            <li style="padding:10px"> @Html.ActionLink("Modify Dependencies", "ModifyDependencies", "Storage")</li>
+            <li style="padding:10px"> @Html.ActionLink("Create Folder", "Create", "Storage") </li>
+            <li style="padding:10px"> @Html.ActionLink("Upload File", "Upload", "Storage") </li>
+            <li style="padding:10px"> @Html.ActionLink("Download File", "Download", "Storage") </li>
+        </ul>
+    </div>
+}
+
+@if (Session["CurrentRole"] == "naiveUser")
+{
+    <div class="dropdown" style="padding-top: 15px; padding-bottom: 15px; padding-right: 15px; ">
+        
+        <a style="text-decoration:none; color: #999; padding:15px" href="#" class="dropdown-toggle" data-toggle="dropdown">Action <b class="caret"></b></a>
+
+        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+            <li style="padding:10px"> @Html.ActionLink("Download File", "Download", "Storage") </li>
+        </ul>
+    </div>
+}
+

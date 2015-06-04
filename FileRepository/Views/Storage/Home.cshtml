@@ -1,0 +1,28 @@
+﻿@model FileRepository.Models.DisplayModel
+@{
+    ViewBag.Title = "Home";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div id="navigation" class="col-md-4" style="word-wrap: break-word; width: 25em; border-right: 1px solid orange; float: left; background-color: #F0F0F0; clear: both">
+            @Html.Partial("Display",Model)
+        </div>
+        <div class="col-md-8">
+
+            <div class="container-fluid">
+                <div class="row">
+                   @Html.Partial("FileManager", Model)
+                </div>
+
+            </div>
+            <div id="test">
+                <pre id="contents">
+                     Home
+            </pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+

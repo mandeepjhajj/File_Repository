@@ -1,0 +1,70 @@
+﻿@model IEnumerable<FileRepository.Models.Storage>
+
+@{
+    ViewBag.Title = "MultipleFoder";
+}
+<script>
+    $(document).ready(function () {
+        $('#postMulti').click(function () {
+            $('#formMulti').submit();
+        });
+    });
+</script>
+
+<h2>Files from the selected folders</h2>
+
+<table class="table table-hover table-striped">
+    <tr>
+        <th>
+            @Html.Display("Select")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Size)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdatedOn)
+        </th>
+        <th></th>
+    </tr>
+@using (Html.BeginForm("MultipleRead", "Storage", FormMethod.Post, new { id = "formMulti" }))
+{
+      
+foreach (var item in Model) {
+    <tr>
+        <td>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="" name="@item.ServerLocation" />
+                </label>
+            </div>
+        </td>
+        <td>@Html.DisplayFor(modelItem => item.Name)
+            
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Size)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedOn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdatedOn)
+        </td>
+    </tr>
+    }
+}
+</table>
+
+<a href="#" id="postMulti">View Files</a>

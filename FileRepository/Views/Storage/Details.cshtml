@@ -1,0 +1,138 @@
+﻿@model FileRepository.Models.Storage
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Storage</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServerLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServerLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContainsFile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContainsFile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContainsFolder)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContainsFolder)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Size)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Size)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdatedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdatedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdatedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdatedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReadAccess)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReadAccess)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WriteAccess)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WriteAccess)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsHidden)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsHidden)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsSharing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsSharing)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

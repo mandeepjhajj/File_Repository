@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BODY>
+  <FILE ServerPath="C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Copy\FileRepository\App_Data\UpLoad\Private\Developer_Java\CommandLine.java" />
+  <FILE ClientPath="FileClass.java" ServerPath="C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Copy\FileRepository\App_Data\UpLoad\Private\Admin_Java\ToRename\FileClass.java">
+    <DEPENDENT ServerPath="C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Copy\FileRepository\App_Data\UpLoad\Private\Admin_Java\CalcDemo1.java" />
+    <DEPENDENT ServerPath="C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Copy\FileRepository\App_Data\UpLoad\Private\Admin_Java\HelloWorld.java" />
+  </FILE>
+  <FILE ServerPath="C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Copy\FileRepository\App_Data\UpLoad\Private\Admin_Java\NewName\FileClass.java">
+    <DEPENDENT ServerPath="C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Copy\FileRepository\App_Data\UpLoad\Private\Admin_Java\CalcDemo1.java" />
+    <DEPENDENT ServerPath="C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Copy\FileRepository\App_Data\UpLoad\Private\Admin_Java\HelloWorld.java" />
+  </FILE>
+  <FILE ServerPath="C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Copy\FileRepository\App_Data\UpLoad\Public\Public_Java\WPFUpload\wpf.java">
+    <DEPENDENT ServerPath="C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Copy\FileRepository\App_Data\UpLoad\Public\Public_Java\WPFUpload\wpf2.java" />
+  </FILE>
+  <FILE ClientPath="BinaryTree.java" ServerPath="C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Copy\FileRepository\App_Data\UpLoad\Private\IP_Demo\BinaryTree.java">
+    <DEPENDENT ServerPath="C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Copy\FileRepository\App_Data\UpLoad\Public\Public_Java\AnotherImplementationAP.java" />
+    <DEPENDENT ServerPath="C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Copy\FileRepository\App_Data\UpLoad\Public\Public_Java\WPFUpload\wpf.java" />
+  </FILE>
+  <FILE ServerPath="C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\App_Data\UpLoad\Private\Admin_CSharp\FileH.cs">
+    <DEPENDENT ServerPath="C:\Users\Mandeep\Documents\Visual Studio 2013\Projects\FileRepository_Final\FileRepository\App_Data\UpLoad\Private\Admin_Java\AnagramSolver.java" />
+  </FILE>
+</BODY>

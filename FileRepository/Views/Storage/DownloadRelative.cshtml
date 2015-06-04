@@ -1,0 +1,31 @@
+﻿@model List<FileRepository.Models.RelativePathModel>
+@{
+    ViewBag.Title = "DownloadRelative";
+}
+
+<h2>Download</h2>
+
+@using (Html.BeginForm("Download", "Storage"))
+{
+    <dl class="dl-horizontal">
+        <dt>
+            Select File
+        </dt>
+        <dd>
+            @Html.DropDownList("Files", Model.Select(m => new SelectListItem() { Text = m.RelativePath, Value = m.ServerLocation }))
+        </dd>
+    </dl>
+    <div class="checkbox">
+        <label>
+            Check if you want to download the dependencies
+            <input type="checkbox" value="" name="depend" />
+        </label>
+    </div>
+    @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Download" class="btn btn-primary" />
+        <br />
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+}

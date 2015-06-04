@@ -1,0 +1,70 @@
+﻿@model FileRepository.Models.DisplayModel
+
+
+@{
+    ViewBag.Title = "Display";
+}
+
+<h2>Server Directory View</h2>
+
+
+@{
+    List<FileRepository.Models.Storage> rootFind = new List<FileRepository.Models.Storage>();
+    List<FileRepository.Models.Storage> root = new List<FileRepository.Models.Storage>();
+      
+        foreach (var s in Model.data)
+        {
+            rootFind.AddRange(s.Value);
+        }
+        foreach (KeyValuePair<FileRepository.Models.Storage, List<FileRepository.Models.Storage>> item in Model.data)
+        {
+            if (!rootFind.Contains(item.Key))
+            {
+                root.Add(item.Key);
+            }
+        }
+
+        foreach (var r in root)
+        {
+            int i = 0;
+            @makeCall(r,i);
+        }
+        
+
+
+@helper makeCall(FileRepository.Models.Storage ro,int id)
+{
+    <ul id="Node@(id)">
+
+        <li>
+            <div class="checkbox">
+                <label><input type="checkbox" value="" name="@ro.ServerLocation">
+                                <a href="#">+</a><a href="#">@ro.Name</a>  @*changed the href from serverlocation to #*@
+                </label>
+            </div>
+            @{
+            List<FileRepository.Models.Storage> list = Model.data[ro];
+            foreach (var l in list)
+            {
+                id++;
+                if (l.ContainsFolder.Equals("Y") || l.ContainsFile.Equals("Y"))
+                {
+
+                    @makeCall(l, id);
+                }
+                else
+                {
+                    <ul id="Node@(id)">
+                        <li>
+                            @*<a href="javascript:{var clickedLink = @l.ServerLocation; var reader = new FileReader(); document.getElementById(#contents).innerhtml= reader.readAsText(file); alert('hi')};">@l.Name</a>*@
+                            <a href="#" name="@l.ServerLocation">@l.Name</a>
+                        </li>
+                    </ul>
+                }
+
+            }
+            }
+        </li>
+    </ul>
+}
+}

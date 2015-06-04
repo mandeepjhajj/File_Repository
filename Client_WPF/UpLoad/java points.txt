@@ -1,0 +1,54 @@
+Oracle SQL:
+
+-Programming logic and Technique (data type and identification, decision flowcharts, operators)
+-Implementing Database design using Oracle 9i (Query ,Retrieve DB, Functions And Joins, Sub Queries, Table Creation, Database Maintain, Indexes, Views, Transaction)
+
+JAVA fundamentals and Programming Language:
+
+-Concept and features of OOP, variables, arrays
+-Create classes and objects and add methods to a class
+-Encapsulation, inheritance and polymorphism
+-Application execution from command line
+-Implement error handling techniques using exception handling
+-Create event driven GUI using GUI components
+-Implement I/o functionality
+-Create TCP/IP client that communicates through sockets
+-UML
+
+JSP:
+
+-Knowledge on struts, Session Management and write JSP 
+
+
+Designed forms using JavaScript and HTML for form validations. 
+Developed servlet based applications. 
+Maintained existing modules and applications. 
+Developed server side and client side code for internal and external web applications. 
+
+
+Developed Servlets for generating dynamic html pages.
+• Designed forms using HTML and JavaScript for form validations.
+• Used EJB for all transaction processing.
+• Data persistence done through JDBC.
+• Used Netbeans for Java as IDE tool.
+• Performed unit testing and system testing.
+• Used ClearCase as data repository.
+
+
+
+	5+ years of experience in software development includes Analysis, Design and Development of Web-based applications.
+•	Extensive experience in design and development of multi-tier applications using Java, J2EE, Struts, Hibernate, XML, XSD, SOAP, WSDL, HTML, JavaScript, Tag Libs, AJAX, Junit. 
+•	Experience with 2-tier, 3-tier and N-tier architecture
+•	Worked on different Application and Web Servers like IBM Web Sphere, BEA Web Logic, Apache Tomcat and JBoss. 
+•	Extensive experience in different IDEs like RAD, Eclipse, NetBeans and Jbuilder.
+•	Experience in Object Oriented Analysis and Design (OOAD) techniques using UML in Rational Rose and MS Visio
+•	Experience in web application design using open source MVC, Spring and Struts Frameworks.
+•	Extensive Experience in using MVC (Model View Controller) architecture for developing applications using JSP, Java Beans and Servlets.
+•	Experience in client side Technologies such as HTML, DHTML, CSS and JavaScript.
+•	Strong experience of developing data models using Hibernate POJO's and configuring Hibernate persistence layer.
+•	Experience using Hibernate for mapping Java classes with database and using Hibernate query language (HQL).
+•	Experience in various methodologies like Waterfall and Agile
+•	Proficient in using RDBMS concepts with Oracle 9i/10g, DB2 and MySQL
+•	Expertise in Database Design, Creation and Management of Schemas, writing Stored Procedures, Functions, DDL, DML SQL queries 
+•	Excellent communication and interpersonal skills and involved in client interactions for scoping, effort estimates and status reporting 
+

@@ -1,0 +1,44 @@
+﻿@model List<FileRepository.Models.Storage>
+@{
+    ViewBag.Title = "ModifyDependencies";
+}
+<script>
+    $(document).ready(function () {
+        $("#showMessage").hide();
+        $('#Files').change(function () {
+            $("#showMessage:visible").hide();
+            var clickedLink = $(this).val();
+            $.post("@Url.Action("ShowDependencies", "Storage")", { path : clickedLink} ,function(data){
+                $("#showDepend").text(data);
+                   $("#showMessage").show();
+            });
+        });
+    });
+</script>
+
+
+<h2>ModifyDependencies</h2>
+
+<div>
+    
+       @Html.Display("Select a file")
+       @Html.DropDownList("Files", Model.Select(m => new SelectListItem() { Text = m.Name, Value = m.ServerLocation }))
+    
+</div>
+<br />
+<br />
+<div>
+    
+    <div id="showMessage">
+        Dependent Files are listed below if any!!
+        <pre id="showDepend" style="border:solid">
+        
+        </pre>
+    </div>
+
+</div>
+@Html.ActionLink("Add dependencies", "AddDependencies", "Storage")
+@Html.ActionLink("remove dependencies", "RemoveDependencies", "Storage")
+<div>
+
+</div>

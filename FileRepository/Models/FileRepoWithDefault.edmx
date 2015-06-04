@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AspNetRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserRoles">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar(max)" />
+          <Property Name="PasswordHash" Type="nvarchar(max)" />
+          <Property Name="SecurityStamp" Type="nvarchar(max)" />
+          <Property Name="Discriminator" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HasFile">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="ChildFile" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="ChildFile" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HasFolder">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="ChildFolder" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="ChildFolder" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MyUsersStoreLink">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="StoreId" />
+          </Key>
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="StoreId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Storage">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="SType" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ClientLocation" Type="nvarchar(max)" />
+          <Property Name="ServerLocation" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ContainsFile" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="ContainsFolder" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="Size" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="CreatedOn" Type="nvarchar" MaxLength="128" />
+          <Property Name="UpdatedOn" Type="nvarchar" MaxLength="128" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+          <Property Name="ReadAccess" Type="nvarchar" MaxLength="128" />
+          <Property Name="WriteAccess" Type="nvarchar" MaxLength="128" />
+          <Property Name="IsHidden" Type="nvarchar" MaxLength="1" />
+          <Property Name="IsSharing" Type="nvarchar" MaxLength="1" />
+        </EntityType>
+        <Association Name="FK__HasFile__ChildFi__29572725">
+          <End Role="Storage" Type="Self.Storage" Multiplicity="1" />
+          <End Role="HasFile" Type="Self.HasFile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Storage">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="HasFile">
+              <PropertyRef Name="ChildFile" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HasFile__Id__286302EC">
+          <End Role="Storage" Type="Self.Storage" Multiplicity="1" />
+          <End Role="HasFile" Type="Self.HasFile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Storage">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="HasFile">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HasFolder__Child__2D27B809">
+          <End Role="Storage" Type="Self.Storage" Multiplicity="1" />
+          <End Role="HasFolder" Type="Self.HasFolder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Storage">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="HasFolder">
+              <PropertyRef Name="ChildFolder" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__HasFolder__Id__2C3393D0">
+          <End Role="Storage" Type="Self.Storage" Multiplicity="1" />
+          <End Role="HasFolder" Type="Self.HasFolder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Storage">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="HasFolder">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MyUsersSt__Store__25869641">
+          <End Role="Storage" Type="Self.Storage" Multiplicity="1" />
+          <End Role="MyUsersStoreLink" Type="Self.MyUsersStoreLink" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Storage">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MyUsersStoreLink">
+              <PropertyRef Name="StoreId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+          <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetRoles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HasFile" EntityType="Self.HasFile" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HasFolder" EntityType="Self.HasFolder" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MyUsersStoreLink" EntityType="Self.MyUsersStoreLink" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Storage" EntityType="Self.Storage" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__HasFile__ChildFi__29572725" Association="Self.FK__HasFile__ChildFi__29572725">
+            <End Role="Storage" EntitySet="Storage" />
+            <End Role="HasFile" EntitySet="HasFile" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HasFile__Id__286302EC" Association="Self.FK__HasFile__Id__286302EC">
+            <End Role="Storage" EntitySet="Storage" />
+            <End Role="HasFile" EntitySet="HasFile" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HasFolder__Child__2D27B809" Association="Self.FK__HasFolder__Child__2D27B809">
+            <End Role="Storage" EntitySet="Storage" />
+            <End Role="HasFolder" EntitySet="HasFolder" />
+          </AssociationSet>
+          <AssociationSet Name="FK__HasFolder__Id__2C3393D0" Association="Self.FK__HasFolder__Id__2C3393D0">
+            <End Role="Storage" EntitySet="Storage" />
+            <End Role="HasFolder" EntitySet="HasFolder" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MyUsersSt__Store__25869641" Association="Self.FK__MyUsersSt__Store__25869641">
+            <End Role="Storage" EntitySet="Storage" />
+            <End Role="MyUsersStoreLink" EntitySet="MyUsersStoreLink" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="MyUsersStoreLink">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="StoreId" />
+          </Key>
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="StoreId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Storage" Relationship="Self.FK__MyUsersSt__Store__25869641" FromRole="MyUsersStoreLink" ToRole="Storage" />
+        </EntityType>
+        <EntityType Name="Storage">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SType" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ClientLocation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ServerLocation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContainsFile" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContainsFolder" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Size" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreatedOn" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedOn" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ReadAccess" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="WriteAccess" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="IsHidden" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="IsSharing" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="MyUsersStoreLinks" Relationship="Self.FK__MyUsersSt__Store__25869641" FromRole="Storage" ToRole="MyUsersStoreLink" />
+          <NavigationProperty Name="Storage11" Relationship="Self.HasFolder" FromRole="Storage" ToRole="Storage1" />
+          <NavigationProperty Name="Storages1" Relationship="Self.HasFolder" FromRole="Storage1" ToRole="Storage" />
+          <NavigationProperty Name="Storage12" Relationship="Model.HasFile1" FromRole="Storage" ToRole="Storage1" />
+          <NavigationProperty Name="Storages2" Relationship="Model.HasFile1" FromRole="Storage1" ToRole="Storage" />
+        </EntityType>
+        <Association Name="FK__MyUsersSt__Store__25869641">
+          <End Role="Storage" Type="Self.Storage" Multiplicity="1" />
+          <End Role="MyUsersStoreLink" Type="Self.MyUsersStoreLink" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Storage">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MyUsersStoreLink">
+              <PropertyRef Name="StoreId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="HasFolder">
+          <End Role="Storage" Type="Self.Storage" Multiplicity="*" />
+          <End Role="Storage1" Type="Self.Storage" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MyUsersStoreLinks" EntityType="Self.MyUsersStoreLink" />
+          <EntitySet Name="Storages" EntityType="Self.Storage" />
+          <AssociationSet Name="FK__MyUsersSt__Store__25869641" Association="Self.FK__MyUsersSt__Store__25869641">
+            <End Role="Storage" EntitySet="Storages" />
+            <End Role="MyUsersStoreLink" EntitySet="MyUsersStoreLinks" />
+          </AssociationSet>
+          <AssociationSet Name="HasFolder" Association="Self.HasFolder">
+            <End Role="Storage" EntitySet="Storages" />
+            <End Role="Storage1" EntitySet="Storages" />
+          </AssociationSet>
+          <AssociationSet Name="HasFile1" Association="Model.HasFile1">
+            <End Role="Storage" EntitySet="Storages" />
+            <End Role="Storage1" EntitySet="Storages" />
+          </AssociationSet>
+          <EntitySet Name="AspNetRoles" EntityType="Model.AspNetRole" />
+          <EntitySet Name="AspNetUsers" EntityType="Model.AspNetUser" />
+          <AssociationSet Name="AspNetUserRoles" Association="Model.AspNetUserRoles">
+            <End Role="AspNetRole" EntitySet="AspNetRoles" />
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+          </AssociationSet>
+        </EntityContainer>
+        <Association Name="HasFile1">
+          <End Type="Model.Storage" Role="Storage" Multiplicity="*" />
+          <End Type="Model.Storage" Role="Storage1" Multiplicity="*" />
+        </Association>
+        <EntityType Name="AspNetRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUsers" Relationship="Model.AspNetUserRoles" FromRole="AspNetRole" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Discriminator" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetRoles" Relationship="Model.AspNetUserRoles" FromRole="AspNetUser" ToRole="AspNetRole" />
+        </EntityType>
+        <Association Name="AspNetUserRoles">
+          <End Type="Model.AspNetRole" Role="AspNetRole" Multiplicity="*" />
+          <End Type="Model.AspNetUser" Role="AspNetUser" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="MyUsersStoreLinks">
+            <EntityTypeMapping TypeName="Model.MyUsersStoreLink">
+              <MappingFragment StoreEntitySet="MyUsersStoreLink">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="StoreId" ColumnName="StoreId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Storages">
+            <EntityTypeMapping TypeName="Model.Storage">
+              <MappingFragment StoreEntitySet="Storage">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="SType" ColumnName="SType" />
+                <ScalarProperty Name="ClientLocation" ColumnName="ClientLocation" />
+                <ScalarProperty Name="ServerLocation" ColumnName="ServerLocation" />
+                <ScalarProperty Name="ContainsFile" ColumnName="ContainsFile" />
+                <ScalarProperty Name="ContainsFolder" ColumnName="ContainsFolder" />
+                <ScalarProperty Name="Size" ColumnName="Size" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="ReadAccess" ColumnName="ReadAccess" />
+                <ScalarProperty Name="WriteAccess" ColumnName="WriteAccess" />
+                <ScalarProperty Name="IsHidden" ColumnName="IsHidden" />
+                <ScalarProperty Name="IsSharing" ColumnName="IsSharing" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="HasFolder" TypeName="Model.HasFolder" StoreEntitySet="HasFolder">
+            <EndProperty Name="Storage">
+              <ScalarProperty Name="Id" ColumnName="ChildFolder" />
+            </EndProperty>
+            <EndProperty Name="Storage1">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="HasFile1" TypeName="Model.HasFile1" StoreEntitySet="HasFile">
+            <EndProperty Name="Storage1">
+              <ScalarProperty Name="Id" ColumnName="Id" />
+            </EndProperty>
+            <EndProperty Name="Storage">
+              <ScalarProperty Name="Id" ColumnName="ChildFile" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <EntitySetMapping Name="AspNetRoles">
+            <EntityTypeMapping TypeName="Model.AspNetRole">
+              <MappingFragment StoreEntitySet="AspNetRoles">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUsers">
+            <EntityTypeMapping TypeName="Model.AspNetUser">
+              <MappingFragment StoreEntitySet="AspNetUsers">
+                <ScalarProperty Name="Discriminator" ColumnName="Discriminator" />
+                <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="AspNetUserRoles" TypeName="Model.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+            <EndProperty Name="AspNetUser">
+              <ScalarProperty Name="Id" ColumnName="UserId" />
+            </EndProperty>
+            <EndProperty Name="AspNetRole">
+              <ScalarProperty Name="Id" ColumnName="RoleId" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

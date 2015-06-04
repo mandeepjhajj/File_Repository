@@ -1,0 +1,116 @@
+﻿@model FileRepository.Models.DisplayModel
+
+<style>
+    #navigation ul ul {
+        display: none;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+
+        $('#navigation  ul  li a').click(function () {
+
+            var siblingsN = $(this).parents().nextAll('ul');
+            var siblingsP = $(this).parents().prevAll('ul');
+
+            if ((siblingsP.is(':visible') || (siblingsN.is(':visible'))) && !$(this).parentsUntil('ul').children('ul').is(":visible")) {
+
+                // var sameLevel = siblings.children('ul');
+                siblingsP.find('ul').slideUp('normal')
+                siblingsN.find('ul').slideUp('normal')
+            }
+
+            if ($(this).parentsUntil('ul').children('ul').is(":visible")) {
+                var child = $(this).parentsUntil('ul').children('ul');
+                child.slideUp("normal");
+            }
+
+            if (!$(this).parentsUntil('ul').children('ul').is(":visible")) {
+                var child = $(this).parentsUntil('ul').children('ul');
+                child.slideDown("normal");
+            }
+
+            if ($(this).closest('li').find('ul').children().length == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        })
+        .click(function () {
+            
+            if ($(this).closest('li').find('ul').children().length == 0) {
+                var clickedLink = $(this).attr('name');
+                $.post("@Url.Action("ReadFile", "Storage")", { path : clickedLink} ,function(data){
+                    $("pre").text(data);
+                });
+               return true;
+            } else {
+                return false;
+            }
+        });
+    });
+
+</script>
+<script>
+    $(document).ready(function() {
+        $('#postBtn').click(function () {
+            $('#formId').submit();
+        });
+        });
+</script>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div id="navigation" class="col-md-4" style="height:500px; word-wrap: break-word; width: 25em; border: 1px solid black; float: left; background-color: #F0F0F0; clear: both">
+           @using (Html.BeginForm("MultipleFoder", "Storage", FormMethod.Post, new { id = "formId" }))
+            {
+               @Html.Partial("Display")
+            }
+        </div>
+        <div class="col-md-8">
+
+            <div class="container-fluid">
+                <div class="row">
+                    @*<div style="background-color: #F0F0F0" class="col-md-1 btn btn-primary btn-md">
+                        @Html.ActionLink("Create Folder", "Create", "Storage")
+                    </div>*@
+                    <div class="col-md-10">
+                        @Html.Label("Select a file from the tree view, below you can see it's content, If you want to see files from multiple folder select the check box and click on View button")
+                    </div>
+                    @*<div style="background-color: #F0F0F0" class="col-md-1 btn btn-primary btn-md">
+                        @Html.ActionLink("Refresh", "Refresh", "Storage")
+                    </div>*@
+                    @*<div style="background-color: #F0F0F0" class="col-md-1 btn btn-primary btn-md">
+                        @Html.ActionLink("Delete File", "DeleteFile", "Storage")
+                    </div>*@
+                    <div class="col-md-1 btn btn-primary btn-md">
+                        <a href="#" id="postBtn">View</a>
+                    </div>
+                    @*<div style="background-color: #F0F0F0" class="col-md-1 btn btn-primary btn-md">
+                       @Html.ActionLink("Modify Dependencies", "ModifyDependencies", "Storage")
+                    </div>*@
+                    @*<div style="background-color: #F0F0F0" class="col-md-1 btn btn-primary btn-md">
+                        @Html.ActionLink("Upload File", "Upload", "Storage")
+                    </div>
+                    <div style="background-color: #F0F0F0" class="col-md-1 btn btn-primary btn-md">
+                        @Html.ActionLink("Download File", "Download", "Storage")
+                    </div>
+                    <div style="background-color: #F0F0F0" class="col-md-1 btn btn-primary btn-md">
+                        @Html.ActionLink("Rename Folder", "Rename", "Storage")
+                    </div>*@
+                    
+                </div>
+                <div class="row">
+                    <div id="test" style="height:450px;">
+                        <pre id=" contents" style="height:450px;overflow:auto">
+                       
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+</div>
+

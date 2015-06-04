@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar(max)" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" />
+    <Property Name="Discriminator" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HasFile">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="ChildFile" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="ChildFile" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HasFolder">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="ChildFolder" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="ChildFolder" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MyUsersStoreLink">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="StoreId" />
+    </Key>
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="StoreId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Storage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="SType" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ClientLocation" Type="nvarchar(max)" />
+    <Property Name="ServerLocation" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ContainsFile" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="ContainsFolder" Type="nvarchar" MaxLength="1" Nullable="false" />
+    <Property Name="Size" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="CreatedOn" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedOn" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="ReadAccess" Type="nvarchar" MaxLength="128" />
+    <Property Name="WriteAccess" Type="nvarchar" MaxLength="128" />
+    <Property Name="IsHidden" Type="nvarchar" MaxLength="1" />
+    <Property Name="IsSharing" Type="nvarchar" MaxLength="1" />
+  </EntityType>
+  <Association Name="FK__HasFile__ChildFi__29572725">
+    <End Role="Storage" Type="Self.Storage" Multiplicity="1" />
+    <End Role="HasFile" Type="Self.HasFile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Storage">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="HasFile">
+        <PropertyRef Name="ChildFile" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HasFile__Id__286302EC">
+    <End Role="Storage" Type="Self.Storage" Multiplicity="1" />
+    <End Role="HasFile" Type="Self.HasFile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Storage">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="HasFile">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HasFolder__Child__2D27B809">
+    <End Role="Storage" Type="Self.Storage" Multiplicity="1" />
+    <End Role="HasFolder" Type="Self.HasFolder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Storage">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="HasFolder">
+        <PropertyRef Name="ChildFolder" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HasFolder__Id__2C3393D0">
+    <End Role="Storage" Type="Self.Storage" Multiplicity="1" />
+    <End Role="HasFolder" Type="Self.HasFolder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Storage">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="HasFolder">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MyUsersSt__Store__25869641">
+    <End Role="Storage" Type="Self.Storage" Multiplicity="1" />
+    <End Role="MyUsersStoreLink" Type="Self.MyUsersStoreLink" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Storage">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MyUsersStoreLink">
+        <PropertyRef Name="StoreId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+    <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HasFile" EntityType="Self.HasFile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HasFolder" EntityType="Self.HasFolder" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MyUsersStoreLink" EntityType="Self.MyUsersStoreLink" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Storage" EntityType="Self.Storage" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__HasFile__ChildFi__29572725" Association="Self.FK__HasFile__ChildFi__29572725">
+      <End Role="Storage" EntitySet="Storage" />
+      <End Role="HasFile" EntitySet="HasFile" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HasFile__Id__286302EC" Association="Self.FK__HasFile__Id__286302EC">
+      <End Role="Storage" EntitySet="Storage" />
+      <End Role="HasFile" EntitySet="HasFile" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HasFolder__Child__2D27B809" Association="Self.FK__HasFolder__Child__2D27B809">
+      <End Role="Storage" EntitySet="Storage" />
+      <End Role="HasFolder" EntitySet="HasFolder" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HasFolder__Id__2C3393D0" Association="Self.FK__HasFolder__Id__2C3393D0">
+      <End Role="Storage" EntitySet="Storage" />
+      <End Role="HasFolder" EntitySet="HasFolder" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MyUsersSt__Store__25869641" Association="Self.FK__MyUsersSt__Store__25869641">
+      <End Role="Storage" EntitySet="Storage" />
+      <End Role="MyUsersStoreLink" EntitySet="MyUsersStoreLink" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

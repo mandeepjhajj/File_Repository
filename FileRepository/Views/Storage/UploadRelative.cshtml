@@ -1,0 +1,39 @@
+﻿@model List<FileRepository.Models.RelativePathModel>
+@{
+    ViewBag.Title = "UploadRelative";
+}
+
+<h2>Upload</h2>
+
+@using (Html.BeginForm("Upload", "Storage"))
+{
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5">
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.Display("Upload to selected folder")
+                    </dt>
+                    <dd>
+                        @Html.DropDownList("Folder", Model.Select(m => new SelectListItem() { Text = m.RelativePath, Value = m.ServerLocation }))
+                    </dd>
+                </dl>
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input name="selection" type="file" value="Browse" class="btn btn-default" />
+
+                </div>
+                <div class="form-actions no-color">
+                    <input type="submit" value="Upload" class="btn btn-primary" />
+                    <br />
+                    @Html.ActionLink("Back to List", "Index")
+                </div>
+            </div>
+            <div class="col-md-7" style="height:100px;">
+                @Html.Display("Select the dependent file from the list")
+                @Html.ListBox("Files", ViewBag.fileList as MultiSelectList, new { @class = "chzn-select",@style = "max-width:700px;" })
+            </div>
+        </div>
+    </div>
+}
